@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "793263385393",
+    "project_id": "kids-magazine-c41d5",
+    "storage_bucket": "kids-magazine-c41d5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:793263385393:android:5a6bac7957b50454d85e10",
+        "android_client_info": {
+          "package_name": "com.irlab.kids_magazine"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "793263385393-tgmlht94guptt5645kio47032fcs0fm6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC07dKUfXe01cvovZU55n_bHd-055oM65Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "793263385393-tgmlht94guptt5645kio47032fcs0fm6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
