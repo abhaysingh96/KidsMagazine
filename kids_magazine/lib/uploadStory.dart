@@ -99,7 +99,7 @@ class _UploadStoryState extends State<UploadStory> {
             return AlertDialog(
               title: Text("Uploaded Successfully! "),
               actions: <Widget>[
-                FlatButton(
+                TextButton(
                   child: Text('OK'),
                   onPressed: () {
                     Navigator.of(context).pop();
@@ -116,7 +116,7 @@ class _UploadStoryState extends State<UploadStory> {
               title: Text("Upload Failed! "),
               content: Text('Story File mush be a text file'),
               actions: <Widget>[
-                FlatButton(
+                TextButton(
                   child: Text('OK'),
                   onPressed: () {
                     Navigator.of(context).pop();
@@ -178,7 +178,7 @@ class _UploadStoryState extends State<UploadStory> {
             return AlertDialog(
               title: Text("Uploaded Successfully! "),
               actions: <Widget>[
-                FlatButton(
+                TextButton(
                   child: Text('OK'),
                   onPressed: () {
                     Navigator.of(context).pop();
@@ -196,7 +196,7 @@ class _UploadStoryState extends State<UploadStory> {
               content: Text(
                   'Audio file must have the extension .mp3, .wav, .wma, .m4a'),
               actions: <Widget>[
-                FlatButton(
+                TextButton(
                   child: Text('OK'),
                   onPressed: () {
                     Navigator.of(context).pop();
@@ -260,7 +260,6 @@ class _UploadStoryState extends State<UploadStory> {
         _image = File(img!.path);
       });
     });
-
   }
 
   Future uploadFile() async {
@@ -273,10 +272,8 @@ class _UploadStoryState extends State<UploadStory> {
     print('Image Uploaded');
   }
 
-
 // getting current user
   User? user = FirebaseAuth.instance.currentUser;
-
 
 // setting various fields in form
   void formProcessor() async {
@@ -521,7 +518,8 @@ class _UploadStoryState extends State<UploadStory> {
                               if (_image != null) {
                                 await uploadFile();
                                 setState(() {
-                                  imagesInStory.add(_uploadedImageURL.toString());
+                                  imagesInStory
+                                      .add(_uploadedImageURL.toString());
                                   print(_uploadedImageURL);
                                   //print(imagesInComplaint);
                                 });
@@ -566,7 +564,7 @@ class _UploadStoryState extends State<UploadStory> {
                           SizedBox(
                             width: 30.0,
                           ),
-                          RaisedButton(
+                          ElevatedButton(
                             child: Text(
                               'Upload Audio File',
                               style: TextStyle(
@@ -595,7 +593,7 @@ class _UploadStoryState extends State<UploadStory> {
                           SizedBox(
                             width: 30.0,
                           ),
-                          RaisedButton(
+                          ElevatedButton(
                               child: Text(
                                 'Upload Story Text File',
                                 style: TextStyle(
@@ -609,14 +607,21 @@ class _UploadStoryState extends State<UploadStory> {
                       SizedBox(
                         height: 25.0,
                       ),
-                      RaisedButton(
+                      ElevatedButton(
                         onPressed: () async {
                           if (story.isNotEmpty) {
                             if (selectedLanguage != null) {
                               if (_formKey1.currentState!.validate()) {
-                                Scaffold.of(context).showSnackBar(SnackBar(
+                                ScaffoldMessenger.of(context).showSnackBar(
+                                  SnackBar(
                                     content: Text(
-                                        'Establishing Contact with the Server')));
+                                        "Establishing Contact with the Server"),
+                                    duration: Duration(milliseconds: 300),
+                                  ),
+                                );
+                                // Scaffold.of(context).showSnackBar(SnackBar(
+                                //     content: Text(
+                                //         'Establishing Contact with the Server')));
 
                                 // uploading audio file
                                 if (audioFileUrl.length == 0)
@@ -643,7 +648,7 @@ class _UploadStoryState extends State<UploadStory> {
                                       title: Text("Alert! "),
                                       content: Text('Please Select a Language'),
                                       actions: <Widget>[
-                                        FlatButton(
+                                        TextButton(
                                           child: Text('OK'),
                                           onPressed: () {
                                             Navigator.of(context).pop();
@@ -662,7 +667,7 @@ class _UploadStoryState extends State<UploadStory> {
                                     content: Text(
                                         'Either paste story in the text field or Upload a text file of story'),
                                     actions: <Widget>[
-                                      FlatButton(
+                                      TextButton(
                                         child: Text('OK'),
                                         onPressed: () {
                                           Navigator.of(context).pop();
@@ -673,15 +678,17 @@ class _UploadStoryState extends State<UploadStory> {
                                 });
                           }
                         },
-                        shape: RoundedRectangleBorder(
-                          side: BorderSide(
-                            color: Colors.transparent,
+                        style: ElevatedButton.styleFrom(
+                          shape: RoundedRectangleBorder(
+                            side: BorderSide(
+                              color: Colors.transparent,
+                            ),
+                            borderRadius: BorderRadius.circular(15.0),
                           ),
-                          borderRadius: BorderRadius.circular(15.0),
+                          elevation: 20.0,
+                          padding: EdgeInsets.fromLTRB(30.0, 12.0, 30.0, 9.0),
+                          foregroundColor: Color(0xFF181621),
                         ),
-                        elevation: 20.0,
-                        padding: EdgeInsets.fromLTRB(30.0, 12.0, 30.0, 9.0),
-                        color: Color(0xFF181621),
                         child: Text(
                           "Submit",
                           style: TextStyle(
