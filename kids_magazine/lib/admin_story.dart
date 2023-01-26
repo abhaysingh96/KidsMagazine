@@ -1,15 +1,9 @@
 import 'dart:convert';
-import 'dart:io';
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:file_picker/file_picker.dart';
-import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:kids_magazine/user_model.dart';
-import 'package:file_picker/file_picker.dart';
-import 'package:flutter_tts/flutter_tts.dart';
 // import 'package:assets_audio_player/assets_audio_player.dart';
-
 
 String original_text = "";
 String language = "";
@@ -159,7 +153,7 @@ class _AdminStoryState extends State<AdminStory>
                       children: [
                         ElevatedButton(
                           style: ElevatedButton.styleFrom(
-                            padding: EdgeInsets.fromLTRB(20.0, 12.0, 20.0, 9.0),
+                          padding: EdgeInsets.fromLTRB(20.0, 12.0, 20.0, 9.0),
                           elevation: 20.0,
                           shape: RoundedRectangleBorder(
                             side: BorderSide(
@@ -167,8 +161,9 @@ class _AdminStoryState extends State<AdminStory>
                             ),
                             borderRadius: BorderRadius.circular(20.0),
                           ),
-                          foregroundColor: Colors.black,
+                          foregroundColor: Color(0xFF181621),
                           ),
+                            
                           onPressed: () async {
                             await stry
                                 .doc(widget._storyID)
@@ -201,7 +196,8 @@ class _AdminStoryState extends State<AdminStory>
                         ),
                         ElevatedButton(
                           style: ElevatedButton.styleFrom(
-                            padding: EdgeInsets.fromLTRB(20.0, 12.0, 20.0, 9.0),
+
+                          padding: EdgeInsets.fromLTRB(20.0, 12.0, 20.0, 9.0),
                           elevation: 20.0,
                           shape: RoundedRectangleBorder(
                             side: BorderSide(
@@ -209,7 +205,7 @@ class _AdminStoryState extends State<AdminStory>
                             ),
                             borderRadius: BorderRadius.circular(20.0),
                           ),
-                          foregroundColor: Color(0xFF181621)
+                          foregroundColor: Color(0xFF181621),
                           ),
                           onPressed: () async {
                             // await stry.doc(widget._storyID).update({'status': 'removed'});
