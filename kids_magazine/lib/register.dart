@@ -61,7 +61,7 @@ class _RegisterPageState extends State<RegisterPage> {
       builder: (BuildContext context) {
         // Doesn't allow the dialog box to pop
         return WillPopScope(
-            onWillPop: ()  async {
+            onWillPop: () async {
               return false;
             },
             child: alert);
@@ -129,16 +129,16 @@ class _RegisterPageState extends State<RegisterPage> {
                                     ),
                                     labelText: 'Username',
                                     focusedBorder: OutlineInputBorder(
-                                      borderRadius:
-                                          BorderRadius.all(Radius.circular(30.0)),
+                                      borderRadius: BorderRadius.all(
+                                          Radius.circular(30.0)),
                                       borderSide: BorderSide(
                                         color: Color(0xFFfea13a),
                                         width: 3.0,
                                       ),
                                     ),
                                     enabledBorder: OutlineInputBorder(
-                                      borderRadius:
-                                          BorderRadius.all(Radius.circular(30.0)),
+                                      borderRadius: BorderRadius.all(
+                                          Radius.circular(30.0)),
                                       borderSide: BorderSide(
                                         color: Color(0xFFfea13a),
                                         width: 3.0,
@@ -174,16 +174,16 @@ class _RegisterPageState extends State<RegisterPage> {
                                     ),
                                     labelText: 'Phone No.',
                                     focusedBorder: OutlineInputBorder(
-                                      borderRadius:
-                                          BorderRadius.all(Radius.circular(30.0)),
+                                      borderRadius: BorderRadius.all(
+                                          Radius.circular(30.0)),
                                       borderSide: BorderSide(
                                         color: Color(0xFFfea13a),
                                         width: 3.0,
                                       ),
                                     ),
                                     enabledBorder: OutlineInputBorder(
-                                      borderRadius:
-                                          BorderRadius.all(Radius.circular(30.0)),
+                                      borderRadius: BorderRadius.all(
+                                          Radius.circular(30.0)),
                                       borderSide: BorderSide(
                                         color: Color(0xFFfea13a),
                                         width: 3.0,
@@ -218,16 +218,16 @@ class _RegisterPageState extends State<RegisterPage> {
                                     ),
                                     labelText: 'Age',
                                     focusedBorder: OutlineInputBorder(
-                                      borderRadius:
-                                          BorderRadius.all(Radius.circular(30.0)),
+                                      borderRadius: BorderRadius.all(
+                                          Radius.circular(30.0)),
                                       borderSide: BorderSide(
                                         color: Color(0xFFfea13a),
                                         width: 3.0,
                                       ),
                                     ),
                                     enabledBorder: OutlineInputBorder(
-                                      borderRadius:
-                                          BorderRadius.all(Radius.circular(30.0)),
+                                      borderRadius: BorderRadius.all(
+                                          Radius.circular(30.0)),
                                       borderSide: BorderSide(
                                         color: Color(0xFFfea13a),
                                         width: 3.0,
@@ -241,10 +241,13 @@ class _RegisterPageState extends State<RegisterPage> {
                                 ElevatedButton(
                                   onPressed: () {
                                     if (_formKey.currentState!.validate()) {
-                                      Scaffold.of(context).showSnackBar(SnackBar(
-                                          content: Text(
-                                              'Establishing Contact with the Server')));
-                                      _showDialog(context);
+                                      ScaffoldMessenger.of(context)
+                                          .showSnackBar(
+                                        SnackBar(
+                                          content: Text("Establishing contact with server"),
+                                          duration: Duration(milliseconds: 300),
+                                        ),
+                                      );
                                       formProcessor();
                                       Navigator.pop(context, '/');
                                       Navigator.pop(context, '/RegisterPage');
@@ -254,15 +257,14 @@ class _RegisterPageState extends State<RegisterPage> {
                                   },
                                   style: ElevatedButton.styleFrom(
                                     shape: RoundedRectangleBorder(
-                                    side: BorderSide(
-                                      color: Colors.transparent,
+                                      side: BorderSide(
+                                        color: Colors.transparent,
+                                      ),
+                                      borderRadius: BorderRadius.circular(15.0),
                                     ),
-                                    borderRadius: BorderRadius.circular(15.0),
-                                  ),
-                                  highlightElevation: 5,
-                                  padding:
-                                      EdgeInsets.fromLTRB(30.0, 12.0, 30.0, 9.0),
-                                  foregroundColor: Colors.orange,
+                                    padding: EdgeInsets.fromLTRB(
+                                        30.0, 12.0, 30.0, 9.0),
+                                    foregroundColor: Colors.orange,
                                   ),
                                   child: Text(
                                     "Submit",
