@@ -1,6 +1,9 @@
+import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:kids_magazine/select.dart';
+import 'package:kids_magazine/transliterate.dart';
+import 'package:flutter/material.dart';
 
 class WelcomePage extends StatefulWidget {
   @override
@@ -66,16 +69,23 @@ class _WelcomePageState extends State<WelcomePage> {
                     ),
                   ),
                   SizedBox(height: 50.0),
-                  RaisedButton(
-                    padding: EdgeInsets.fromLTRB(41.0, 12.0, 41.0, 9.0),
-                    elevation: 20.0,
-                    shape: RoundedRectangleBorder(
+                  ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                           padding: const EdgeInsets.fromLTRB(41.0, 12.0, 41.0, 9.0),
+                           elevation: 20.0,
+                           shape: RoundedRectangleBorder(
                       side: BorderSide(
                         color: Colors.transparent,
                       ),
                       borderRadius: BorderRadius.circular(20.0),
                     ),
-                    color: Color(0xFFfea13a),
+                    
+                       foregroundColor: Colors.black, // Background color
+                       //disabledForegroundColor: Colors.black,// text color // DO IT PROPERLY
+                    ),
+                    
+                    
+                    
                     onPressed: () {
                       Navigator.push(
                         context,
