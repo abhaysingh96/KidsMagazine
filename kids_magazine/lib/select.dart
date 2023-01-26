@@ -26,8 +26,9 @@ class _SelectLanguageState extends State<SelectLanguage> {
           SizedBox(
             height: 100.0,
           ),
-          RaisedButton(
-            padding: EdgeInsets.fromLTRB(45.0, 12.0, 45.0, 9.0),
+          ElevatedButton(
+            style: ElevatedButton.styleFrom(
+             padding: EdgeInsets.fromLTRB(45.0, 12.0, 45.0, 9.0),
             elevation: 20.0,
             shape: RoundedRectangleBorder(
               side: BorderSide(
@@ -35,7 +36,17 @@ class _SelectLanguageState extends State<SelectLanguage> {
               ),
               borderRadius: BorderRadius.circular(20.0),
             ),
-            color: Color(0xFF181621),
+            foregroundColor: Color(0xFF181621), 
+            ),
+            // padding: EdgeInsets.fromLTRB(45.0, 12.0, 45.0, 9.0),
+            // elevation: 20.0,
+            // shape: RoundedRectangleBorder(
+            //   side: BorderSide(
+            //     color: Colors.transparent,
+            //   ),
+            //   borderRadius: BorderRadius.circular(20.0),
+            // ),
+            // color: Color(0xFF181621),
             onPressed: () {
               Navigator.pop(context);
               Navigator.push(
@@ -58,8 +69,9 @@ class _SelectLanguageState extends State<SelectLanguage> {
           SizedBox(
             height: 50,
           ),
-          RaisedButton(
-            padding: EdgeInsets.fromLTRB(41.0, 12.0, 41.0, 9.0),
+          ElevatedButton(
+            style: ElevatedButton.styleFrom(
+               padding: EdgeInsets.fromLTRB(50.0, 12.0, 50.0, 9.0),
             elevation: 20.0,
             shape: RoundedRectangleBorder(
               side: BorderSide(
@@ -67,7 +79,17 @@ class _SelectLanguageState extends State<SelectLanguage> {
               ),
               borderRadius: BorderRadius.circular(20.0),
             ),
-            color: Color(0xFF181621),
+            foregroundColor: Color(0xFF181621),
+            ),
+            // padding: EdgeInsets.fromLTRB(41.0, 12.0, 41.0, 9.0),
+            // elevation: 20.0,
+            // shape: RoundedRectangleBorder(
+            //   side: BorderSide(
+            //     color: Colors.transparent,
+            //   ),
+            //   borderRadius: BorderRadius.circular(20.0),
+            // ),
+            // color: Color(0xFF181621),
             onPressed: () {
               Navigator.pop(context);
               Navigator.push(
@@ -90,8 +112,9 @@ class _SelectLanguageState extends State<SelectLanguage> {
           SizedBox(
             height: 50,
           ),
-          RaisedButton(
-            padding: EdgeInsets.fromLTRB(50.0, 12.0, 50.0, 9.0),
+          ElevatedButton(
+            style: ElevatedButton.styleFrom(
+               padding: EdgeInsets.fromLTRB(50.0, 12.0, 50.0, 9.0),
             elevation: 20.0,
             shape: RoundedRectangleBorder(
               side: BorderSide(
@@ -99,7 +122,17 @@ class _SelectLanguageState extends State<SelectLanguage> {
               ),
               borderRadius: BorderRadius.circular(20.0),
             ),
-            color: Color(0xFF181621),
+            foregroundColor: Color(0xFF181621),
+            ),
+            // padding: EdgeInsets.fromLTRB(50.0, 12.0, 50.0, 9.0),
+            // elevation: 20.0,
+            // shape: RoundedRectangleBorder(
+            //   side: BorderSide(
+            //     color: Colors.transparent,
+            //   ),
+            //   borderRadius: BorderRadius.circular(20.0),
+            // ),
+            // color: Color(0xFF181621),
             onPressed: () {
               Navigator.pop(context);
               Navigator.push(
