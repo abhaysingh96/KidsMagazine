@@ -1,7 +1,11 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/painting.dart';
+import 'package:kids_magazine/welcome.dart';
 
+import 'home.dart';
 
 class RegisterPage extends StatefulWidget {
   @override
@@ -248,7 +252,8 @@ class _RegisterPageState extends State<RegisterPage> {
                                           context, '/home');
                                     }
                                   },
-                                  shape: RoundedRectangleBorder(
+                                  style: ElevatedButton.styleFrom(
+                                    shape: RoundedRectangleBorder(
                                     side: BorderSide(
                                       color: Colors.transparent,
                                     ),
@@ -257,7 +262,8 @@ class _RegisterPageState extends State<RegisterPage> {
                                   highlightElevation: 5,
                                   padding:
                                       EdgeInsets.fromLTRB(30.0, 12.0, 30.0, 9.0),
-                                  color: Color(0xFFfea13a),
+                                  foregroundColor: Colors.orange,
+                                  ),
                                   child: Text(
                                     "Submit",
                                     style: TextStyle(
