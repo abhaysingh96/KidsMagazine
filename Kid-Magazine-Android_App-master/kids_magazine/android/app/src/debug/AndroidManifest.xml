@@ -1,0 +1,11 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.irlab.kids_magazine"
+    xmlns:tools="http://schemas.android.com/tools">
+    <!-- Flutter needs it to communicate with the running application
+         to allow setting breakpoints, to provide hot reload, etc.
+    -->
+    <uses-sdk tools:overrideLibrary="xyz.luan.audioplayers"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <application android:usesCleartextTraffic="true">
+    </application>
+</manifest>
